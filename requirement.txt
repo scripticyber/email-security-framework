@@ -1,0 +1,25 @@
+fastapi==0.115.0
+uvicorn==0.31.0
+celery==5.4.0
+rabbitmq==3.13.0  # Via Docker
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+elasticsearch==8.15.0
+dnspython==2.6.1
+dkimpy==1.1.0
+pyspf==2.0.14  # For SPF
+pymisp==2.4.199
+virustotal-python==1.0.0
+requests==2.32.3
+aiohttp==3.10.5
+scikit-learn==1.5.2
+transformers==4.45.1  # For AI phishing detection
+prophet==1.1.6  # For forecasting
+ipfshttpclient==0.8.0  # For IPFS
+pytesseract==0.3.10  # OCR
+deepface==0.0.93  # Deepfake detection
+cryptography==43.0.1  # Quantum-resistant checks
+pytest==8.3.3
+redis==5.0.8  # Caching/rate limiting
+slowapi==0.1.9  # Rate limiting
+thehive4py==2.2.0  # TheHive integration

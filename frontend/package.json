@@ -1,0 +1,13 @@
+{
+  "name": "email-sec-dashboard",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "d3": "^7.9.0",
+    "react-gamification": "^1.0.0"  // For leaderboards
+  },
+  "scripts": {
+    "start": "react-scripts start"
+  }
+}
