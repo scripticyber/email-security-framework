@@ -1,0 +1,66 @@
+email-security-framework/
+├── .github/                        ← Add this folder
+│   └── workflows/
+│       └── ci.yml                  ← Basic GitHub Actions CI (lint + test)
+├── app/                            ← already started
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── models.py
+│   ├── tasks.py                    ← Celery tasks
+│   ├── routers/
+│   │   ├── __init__.py             ← add empty file
+│   │   ├── ingestion.py
+│   │   ├── analysis.py
+│   │   ├── enrichment.py
+│   │   ├── scoring.py
+│   │   ├── orchestration.py
+│   │   └── dashboard.py
+│   ├── utils/
+│   │   ├── __init__.py             ← add empty
+│   │   ├── email_parser.py
+│   │   ├── auth_checks.py
+│   │   ├── ioc_extractor.py        ← create stub if missing
+│   │   ├── sandbox.py              ← stub for Cuckoo/YARA
+│   │   ├── ml_features.py
+│   │   ├── decentralized_intel.py
+│   │   ├── multimodal_analysis.py
+│   │   └── responder.py
+│   └── services/
+│       ├── __init__.py             ← add empty
+│       ├── threat_intel.py         ← MISP, VT, AbuseIPDB connectors
+│       └── siem.py                 ← TheHive / Wazuh stubs
+├── frontend/                       ← React app
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico             ← optional but nice
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── RiskGauge.js
+│   │   │   ├── IOCGraph.js
+│   │   │   ├── Leaderboard.js
+│   │   │   └── ForecastChart.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── App.css                 ← optional styling
+│   ├── package.json
+│   └── .env.example                ← frontend env vars template
+├── tests/                          ← unit/integration tests
+│   ├── __init__.py
+│   ├── test_parser.py              ← example: test email_parser
+│   └── test_scoring.py             ← stub
+├── scripts/                        ← helper scripts
+│   ├── setup.sh                    ← optional: install deps
+│   └── seed_db.py                  ← optional: insert test data
+├── docs/                           ← documentation (very useful for OSS)
+│   ├── architecture.md             ← paste the original high-level design
+│   └── api.md                      ← future OpenAPI description
+├── .env.example                    ← template for secrets (never commit real .env)
+├── .dockerignore                   ← speeds up Docker builds
+├── .pre-commit-config.yaml         ← optional: auto lint/format on commit
+├── CONTRIBUTING.md                 ← how others can help
+├── SECURITY.md                     ← security reporting policy
+├── CHANGELOG.md                    ← track versions (start empty)
+├── requirements-dev.txt            ← dev tools (pytest, black, ruff, etc.)
+├── pyproject.toml                  ← modern: black, ruff, pytest config
+└── README.md                       ← already have
